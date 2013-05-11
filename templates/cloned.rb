@@ -1,3 +1,6 @@
+# Credit where credit is due:
+# https://github.com/jamesottaway/babushka-deps/blob/6791f60e7d40e45e048daecbcc90613bc74bd138/templates/git.rb
+
 meta :cloned do
   accepts_value_for :repo
   accepts_value_for :destination
