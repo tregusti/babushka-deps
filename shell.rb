@@ -19,14 +19,14 @@ dep "zsh" do
     shell("file -bh ~/.zprezto") =~ /^symbolic link to/
   }
   meet {
-    shell "./create-symlinks.sh", :cd => "~/code/pretzo"
+    shell "./create-symlinks.sh", :cd => "~/code/prezto"
   }
 end
 
 dep "zsh config.cloned" do
   requires    "code"
   repo        "https://github.com/tregusti/prezto.git"
-  destination "~/code/pretzo"
+  destination "~/code/prezto"
 end
 
 dep "zsh" do
