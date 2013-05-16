@@ -12,28 +12,23 @@ end
 
 dep "zsh" do
   requires "zsh as user shell",
-           "zsh as system shell",
-           "zsh config.cloned"
+           "zsh as system shell"
+end
 
+
+dep "dotfiles.cloned" do
+  requires    "code", "zsh"
+  repo        "https://github.com/tregusti/dotfiles.git"
+  destination "~/code/dotfiles"
+  
   met? {
-    shell("file -bh ~/.zprezto") =~ /^symbolic link to/
+    "~/code/dotfiles".p.directory?
   }
-  meet {
-    shell "./create-symlinks.sh", :cd => "~/code/prezto"
+  after {
+    shell "rake install", :cd => "~/code/dotfiles"
   }
 end
 
-dep "zsh config.cloned" do
-  requires    "code"
-  repo        "https://github.com/tregusti/prezto.git"
-  destination "~/code/prezto"
-end
-
-dep "zsh" do
-  requires "zsh as user shell",
-           "zsh as system shell",
-           "zsh config"
-end
 
 
 dep "git.managed"
