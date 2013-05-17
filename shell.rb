@@ -1,7 +1,7 @@
 dep "zsh as user shell" do
   requires "zsh.managed"
-  met? { sudo("dscl localhost -read /Local/Default/Users/#{shell 'whoami'} shell")['/bin/zsh'] }
-  meet { sudo("chsh -s '/bin/zsh' #{var(:username)}") }
+  met? { sudo("dscl localhost -read /Local/Default/Users/#{current_username} shell")['/bin/zsh'] }
+  meet { sudo("chsh -s '/bin/zsh' #{current_username}") }
 end
 
 dep "zsh as system shell" do
@@ -16,7 +16,7 @@ dep "zsh" do
 end
 
 
-dep "dotfiles.cloned" do
+dep "dotfiles.repo" do
   requires    "code", "zsh"
   repo        "https://github.com/tregusti/dotfiles.git"
   destination "~/code/dotfiles"
@@ -25,7 +25,10 @@ dep "dotfiles.cloned" do
     "~/code/dotfiles".p.directory?
   }
   after {
-    shell "rake install", :cd => "~/code/dotfiles"
+    log_warn %Q{Don't forget to invoke the install script:
+
+  cd ~/code/dotfiles
+  rake install}
   }
 end
 
