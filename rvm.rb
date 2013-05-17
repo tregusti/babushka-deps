@@ -9,6 +9,3 @@ dep "rvm" do
     shell "curl -L https://get.rvm.io | bash -s stable --autolibs=packages --ruby --rails"
   }
 end
-
-
-dep "curl.managed"

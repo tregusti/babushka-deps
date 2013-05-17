@@ -31,16 +31,3 @@ dep "dotfiles.repo" do
   rake install}
   }
 end
-
-
-
-dep "git.managed"
-dep "zsh.managed" do
-  after {
-    # If you have administrator privileges, you must fix an Apple miss
-    # configuration in Mac OS X 10.7 Lion by renaming /etc/zshenv to
-    # /etc/zprofile, or Zsh will have the wrong PATH when executed
-    # non-interactively by scripts.
-    sudo "mv /etc/zshenv /etc/zprofile"
-  }
-end
