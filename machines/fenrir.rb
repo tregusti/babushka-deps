@@ -36,7 +36,8 @@ dep "fenrir" do
            "VLC.app"
 
   # System setup
-  requires "dotfiles.repo",
+  requires "homebrew",
+           "dotfiles.repo",
            "OSX Dock configured",
            "rvm configured"
 end
