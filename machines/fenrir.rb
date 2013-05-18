@@ -37,5 +37,6 @@ dep "fenrir" do
 
   # System setup
   requires "dotfiles.repo",
-           "OSX Dock configured"
+           "OSX Dock configured",
+           "rvm configured"
 end
