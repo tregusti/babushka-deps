@@ -12,4 +12,7 @@ dep "iTerm.app"               do sparkle "http://iterm2.googlecode.com/svn/trunk
 dep "Querious.app"            do sparkle "https://store.araelium.com/updates/querious" end
 dep "SizeUp.app"              do sparkle "http://www.irradiatedsoftware.com/updates/sizeup.xml" end
 dep "Sublime Text 2.app"      do sparkle "http://www.sublimetext.com/updates/2/stable/appcast_osx.xml" end
+dep "TotalFinder"             do sparkle "http://updates.binaryage.com/totalfinder.xml" end
+dep "TotalFinder beta"        do sparkle "http://updates.binaryage.com/totalfinder-beta.xml" end
 dep "Transmission.app"        do sparkle "http://update.transmissionbt.com/appcast.xml" end
+  
