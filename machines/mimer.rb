@@ -10,8 +10,8 @@ dep "mimer" do
            "1Password.app",
            "Dropbox.app",
            "Bonjour Mounter.app",
-           "The Unarchiver.app",
-           "TotalFinder beta.app"
+           "The Unarchiver.app"
+           # "TotalFinder beta.app"
 
   # Media apps
   requires "Spotify.app",
