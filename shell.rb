@@ -15,16 +15,35 @@ dep "zsh" do
            "zsh as system shell"
 end
 
-
-dep "dotfiles.repo" do
-  requires    "code", "zsh"
-  repo        "https://github.com/tregusti/dotfiles.git"
-  destination "~/code/dotfiles"
+dep "dotfiles configured", :fullname, :email, :github_username do
+  requires "code", "zsh"
+  requires "dotfiles.repo"
   
   met? {
-    "~/code/dotfiles".p.directory?
+    "~/.gitconfig".p.exists?
   }
+  meet {
+    fullname.ask "Your full name"
+    email.ask "Your email"
+    github_username.ask "Github username"
+  
+    input = ""
+    input << "y\n" if "~/.gitconfig".p.exists?
+    input << "#{fullname}\n"
+    input << "#{email}\n"
+    input << "#{github_username}\n"
+    input << "" # token...
+
+    login_shell %Q{rake install <<< "#{input}"}, :cd => "~/code/dotfiles"
+  }
+end
+
+dep "dotfiles.repo" do
+  repo        "git@github.com:wailqill/dotfiles.git"
+  destination "~/code/dotfiles"
+  
   after {
+    
     log_warn %Q{Don't forget to invoke the install script:
 
   cd ~/code/dotfiles

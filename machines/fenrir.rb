@@ -38,7 +38,7 @@ dep "fenrir" do
 
   # System setup
   requires "homebrew",
-           "dotfiles.repo",
+           "dotfiles configured",
            "OSX Dock configured",
            "rvm configured",
            "node"

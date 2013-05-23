@@ -1,6 +1,11 @@
 # Media computer
 dep "mimer" do
   
+  # System setup
+  requires "homebrew",
+           "dotfiles configured",
+           "OSX Dock configured"
+
   # Browsers
   requires "Google Chrome.app"
 
@@ -16,8 +21,4 @@ dep "mimer" do
   # Media apps
   requires "Spotify.app",
            "VLC.app"
-
-  # System setup
-  requires "dotfiles.repo",
-           "OSX Dock configured"
 end
