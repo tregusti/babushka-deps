@@ -29,8 +29,8 @@ dep "fenrir" do
            "Dropbox.app",
            "Bonjour Mounter.app",
            "The Unarchiver.app",
-           "Things.app",
-           "TotalFinder beta.app"
+           "Things.app"
+           # "TotalFinder beta.app"
 
   # Media apps
   requires "Spotify.app",
