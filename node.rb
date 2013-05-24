@@ -35,7 +35,7 @@ end
 
 dep "nvm" do
   # curl needed to get new node versions
-  request "curl.managed"
+  requires "curl.managed"
   
   def remote_url
     "https://github.com/creationix/nvm.git"
