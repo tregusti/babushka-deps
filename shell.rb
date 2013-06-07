@@ -41,12 +41,4 @@ end
 dep "dotfiles.repo" do
   repo        "git@github.com:wailqill/dotfiles.git"
   destination "~/code/dotfiles"
-  
-  after {
-    
-    log_warn %Q{Don't forget to invoke the install script:
-
-  cd ~/code/dotfiles
-  rake install}
-  }
 end
