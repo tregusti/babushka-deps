@@ -1,3 +1,5 @@
+meta
+
 dep "OSX Dock configured" do
   met? {
     "1" == shell("defaults read com.apple.Dock showhidden") &&
@@ -8,5 +10,17 @@ dep "OSX Dock configured" do
     shell "defaults write com.apple.Dock showhidden -bool YES"
     shell "defaults write com.apple.Dock autohide -bool YES"
     shell "defaults write com.apple.Dock tilesize -int 48"
+  }
+end
+
+dep "OSX configured" do
+  requires "code"
+  requires "dotfiles.repo"
+  
+  setup { done = false }
+  met? { done }
+  meet {
+    shell "~/code/dotfiles/scripts/osx.sh"
+    done = true
   }
 end
