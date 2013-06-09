@@ -29,7 +29,8 @@ dep "fenrir" do
            "Dropbox.app",
            "Bonjour Mounter.app",
            "The Unarchiver.app",
-           "Things.app"
+           "Things.app",
+           "Tagger.app"
            # "TotalFinder beta.app"
 
   # Media apps

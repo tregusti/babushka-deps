@@ -15,7 +15,8 @@ dep "mimer" do
            "1Password.app",
            "Dropbox.app",
            "Bonjour Mounter.app",
-           "The Unarchiver.app"
+           "The Unarchiver.app",
+           "Tagger.app"
            # "TotalFinder beta.app"
 
   # Media apps
