@@ -1,5 +1,3 @@
-meta
-
 dep "OSX Dock configured" do
   met? {
     "1" == shell("defaults read com.apple.Dock showhidden") &&
