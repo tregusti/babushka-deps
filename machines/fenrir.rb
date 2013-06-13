@@ -1,7 +1,7 @@
 dep "fenrir" do
   # Browsers
-  requires "Google Chrome.app",
-           "Google Chrome Canary.app",
+  requires "Google Chrome configured",
+           "Google Chrome Canary configured",
            "Opera.app",
            # "Opera Next.app", # next releases not available right now...
            "Firefox.app",
