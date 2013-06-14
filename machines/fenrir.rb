@@ -6,8 +6,8 @@ dep "fenrir" do
            "Safari configured",
            "Opera.app",
            "Opera Next.app",
-           "Firefox.app",
-           "Firefox Aurora.app"
+           "Firefox configured",
+           "Firefox Aurora configured"
 
   # CLI tools
   requires "the_silver_searcher.managed",
