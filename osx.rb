@@ -14,8 +14,8 @@ end
 dep "OSX configured" do
   requires "code"
   requires "dotfiles.repo"
+  done = false
   
-  setup { done = false }
   met? { done }
   meet {
     shell "~/code/dotfiles/scripts/osx.sh"
