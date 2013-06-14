@@ -99,3 +99,4 @@ end
 dep "Google Chrome Canary configured" do
   requires "Google Chrome Canary.chrome_css"
 end
+
