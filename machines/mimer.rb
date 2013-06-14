@@ -7,7 +7,8 @@ dep "mimer" do
            "OSX Dock configured"
 
   # Browsers
-  requires "Google Chrome configured"
+  requires "Google Chrome configured",
+           "Safari configured"
 
   # Utils
   requires "iStat Menus.app",
