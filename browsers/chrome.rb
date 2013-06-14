@@ -94,9 +94,11 @@ dep "Google Chrome Canary.chrome_css" do
 end
 
 dep "Google Chrome configured" do
+  requires "Google Chrome.app"
   requires "Google Chrome.chrome_css"
 end
 dep "Google Chrome Canary configured" do
+  requires "Google Chrome Canary.app"
   requires "Google Chrome Canary.chrome_css"
 end
 
