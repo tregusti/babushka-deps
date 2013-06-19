@@ -4,8 +4,8 @@ dep "fenrir" do
            "Google Chrome Canary configured",
            "WebKit configured",
            "Safari configured",
-           "Opera.app",
-           "Opera Next.app",
+           "Opera configured",
+           "Opera Next configured",
            "Firefox configured",
            "Firefox Aurora configured"
 

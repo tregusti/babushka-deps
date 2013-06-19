@@ -1,6 +1,7 @@
 require "json"
 
 meta :chrome_css do
+  accepts_value_for :vendor, %w(Google Opera)
   accepts_value_for :app_name, ["Chrome", "Chrome Canary"]
     
   template {
@@ -9,9 +10,17 @@ meta :chrome_css do
     def original_css_file
       "/Users/#{current_username}/code/dotfiles/config/browser.css"
     end
+    
+    def opera?
+      vendor == "Opera"
+    end
 
     def root
-      "/Users/#{current_username}/Library/Application Support/Google/#{app_name}"
+      if opera?
+        "/Users/#{current_username}/Library/Application Support/com.operasoftware.OperaNext"
+      else
+        "/Users/#{current_username}/Library/Application Support/#{vendor}/#{app_name}"
+      end
     end
   
     def local_state_file
@@ -36,7 +45,12 @@ meta :chrome_css do
     end
   
     def main_profile
-      profiles.first
+      if opera?
+        # Opera uses single profile system
+        "."
+      else
+        profiles.first
+      end
     end
 
     def linked_css_file
@@ -63,8 +77,13 @@ meta :chrome_css do
   
     def kill
       if running?
-        log_warn "Killing #{app_name}"
-        shell "killall 'Google #{app_name}' > /dev/null 2>&1"
+        if opera?
+          log_warn "Killing #{vendor}"
+          shell "killall '#{vendor}' > /dev/null 2>&1"
+        else
+          log_warn "Killing #{app_name}"
+          shell "killall '#{vendor} #{app_name}' > /dev/null 2>&1"
+        end
       end
     end
 
@@ -73,8 +92,13 @@ meta :chrome_css do
     }
     meet {
       if linkable?
+        # Kill running apps
         kill
+        # Ensure directory exists
+        File.dirname(linked_css_file).p.mkdir
+        # Kill existing file (maybe not needed)
         shell "rm -rf '#{linked_css_file}'"
+        # Link to css
         shell "ln -sfn '#{original_css_file}' '#{linked_css_file}'"
       else
         log_error "Custom css file exists with contents. Will not overwrite!"
