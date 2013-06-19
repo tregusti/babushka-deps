@@ -10,7 +10,7 @@ dep "Google Chrome.app"         do source "http://dl.google.com/chrome/mac/stabl
 dep "Hex Fiend.app"             do source "http://ridiculousfish.com/hexfiend/files/HexFiend.dmg" end
 dep "HTTP Client.app"           do source "http://ditchnet.org/httpclient/dist/HTTPClient.zip" end
 dep "Opera.app"                 do source "http://www.opera.com/download/get/?id=35742" end
-dep "Opera Next.app"            do source "http://www.opera.com/download/get/?partner=www&opsys=MacOS&product=Opera%20Next" end
+dep "Opera Next.app"            do source "http://www.opera.com/download/get/?id=35817&location=360&nothanks=yes&sub=marine" end
 dep "Pixelmator.app"            do source "http://pixelmator.s3.amazonaws.com/Pixelmator.zip" end
 dep "Skype.app"                 do source "http://www.skype.com/go/getskype-macosx.dmg" end
 dep "Spotify.app"               do source "http://download.spotify.com/Spotify.dmg" end
