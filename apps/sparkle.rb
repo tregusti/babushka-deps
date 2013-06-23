@@ -16,4 +16,4 @@ dep "Tagger.app"              do sparkle "http://bilalh.github.io/sparkle/tagger
 dep "TotalFinder.app"         do sparkle "http://updates.binaryage.com/totalfinder.xml" end
 dep "TotalFinder beta.app"    do sparkle "http://updates.binaryage.com/totalfinder-beta.xml" end
 dep "Transmission.app"        do sparkle "http://update.transmissionbt.com/appcast.xml" end
-  
+dep "CleanMyMac 2.app"        do sparkle "http://updates.devmate.com/com.macpaw.CleanMyMac2.xml" end

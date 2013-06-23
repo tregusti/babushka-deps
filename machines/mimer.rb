@@ -11,7 +11,8 @@ dep "mimer" do
            "Safari configured"
 
   # Utils
-  requires "iStat Menus.app",
+  requires "CleanMyMac 2.app",
+           "iStat Menus.app",
            "Alfred.app",
            "1Password.app",
            "Dropbox.app",
