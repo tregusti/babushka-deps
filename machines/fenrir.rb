@@ -33,7 +33,8 @@ dep "fenrir" do
            "Bonjour Mounter.app",
            "The Unarchiver.app",
            "Things.app",
-           "Tagger.app"
+           "Tagger.app",
+           "Handbrake.app"
            # "TotalFinder beta.app"
 
   # Media apps

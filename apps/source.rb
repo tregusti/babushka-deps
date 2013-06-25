@@ -31,6 +31,11 @@ dep "Firefox Aurora.app"        do
                                   provides "FirefoxAurora.app"
                                   source "https://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/2013-05-17-00-40-16-mozilla-aurora/firefox-23.0a2.en-US.mac.dmg"
                                 end
+dep "Handbrake.app"             do
+                                  # Needed to read region limited stuff
+                                  requires "libdvdcss.managed"
+                                  source "http://handbrake.fr/rotation.php?file=HandBrake-0.9.9-MacOSX.6_GUI_x86_64.dmg"
+                                end
 dep "HTTPScoop.app"             do source "http://www.tuffcode.com/releases/HTTPScoop_1.4.3.dmg" end
 dep "LaunchBar.app"             do source "http://www.obdev.at/downloads/launchbar/LaunchBar-5.4.3.dmg" end
 dep "Sequel Pro.app"            do source "http://sequel-pro.googlecode.com/files/sequel-pro-0.9.8.dmg" end
