@@ -39,6 +39,6 @@ dep "dotfiles configured", :fullname, :email, :github_username do
 end
 
 dep "dotfiles.repo" do
-  repo        "git@github.com:tregusti/dotfiles.git"
+  repo        "https://github.com/tregusti/dotfiles"
   destination "~/code/dotfiles"
 end
