@@ -16,7 +16,7 @@ My custom dependencies for Babushka.
       
       But if it does, ensure you have write access to it without sudo. One solution could be:
         
-      ´´´bash
+      ```bash
       sudo chown -R :staff /usr/local
       sudo chmod -R 775 /usr/local
       ```
