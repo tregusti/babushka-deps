@@ -40,17 +40,21 @@ dep "nvm" do
   def remote_url
     "https://github.com/creationix/nvm.git"
   end
+
+  def base_path
+    "~/.nvm"
+  end
   
   met? {
-    exists = "~/.nvm/nvm.sh".p.exists?
+    exists = "#{base_path}/nvm.sh".p.exists?
     if exists
-      repo = Babushka::GitRepo.new "~/.nvm"
+      repo = Babushka::GitRepo.new base_path
       git_update remote_url, repo
     end
     exists
   }
   meet {
-    git remote_url, :to => "~/.nvm"
+    git remote_url, :to => base_path
     new_shell_warning "nvm"
   }
 end
