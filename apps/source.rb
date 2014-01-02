@@ -20,7 +20,7 @@ dep "Versions.app"              do source "http://versionsapp.com/redirect/versi
 
 # Fixed versions
 
-dep "1Password.app"             do source "http://aws.cachefly.net/dist/1P/mac/1Password-3.8.21.zip" end
+dep "1Password.app"             do source "http://i.agilebits.com/dist/1P/mac4/1Password-4.1.1.zip" end
 dep "KeyCue.app"                do source "http://www.ergonis.com/downloads/products/keycue/KeyCue71-Install.dmg" end
 dep "Airfoil.app"               do source "http://www.rogueamoeba.com/airfoil/download/Airfoil.zip" end
 dep "Bonjour Mounter.app"       do source "http://bonjourmounter.gestosoft.com/download/Bonjour%20Mounter%203.0.13.zip" end
