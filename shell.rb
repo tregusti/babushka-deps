@@ -18,6 +18,7 @@ end
 dep "dotfiles configured", :fullname, :email, :github_username do
   requires "code", "zsh"
   requires "dotfiles.repo"
+  requires "fantasque-sans-mono.font"
   
   met? {
     "~/.gitconfig".p.exists?
